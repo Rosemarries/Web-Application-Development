@@ -1,0 +1,77 @@
+/* body {
+    margin: 0 23% 0 23%;
+} */
+
+.top, footer {
+    background-color: #ffcc00;
+    color: blue;
+    text-align: center;
+}
+
+.article {
+    color: plum;
+    text-align: center;
+}
+
+.reporter {
+    color: #4884b5;
+    width: 100%;
+    display: inline-block;
+}
+
+.reporter img {
+    float: right;
+    border: #4884b5 solid 3px;
+}
+
+.reporter time {
+    color: #ff3aac;
+    font-style: italic;
+}
+
+.col1 {
+    width: 50%;
+    display: inline-block;
+}
+
+.col2 {
+    position: absolute;
+    display: inline-block;
+}
+
+aside {
+    width: 35%;
+    float: right;
+    position: static;
+    top: 16px;
+    font-size: 36px;
+    border-top: solid 3px;
+    border-bottom: solid 3px;
+}
+
+progress {
+    /* -webkit-appearance: none; */
+    color: #4884b5;
+    border: rgb(180, 180, 180) solid 1px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #fff;
+    scale: true;
+}
+
+progress::-webkit-progress-value {
+    background-color: #8ab4f9;
+}
+
+/* progress::-webkit-meter-bar{
+    border-right: 1px solid #000 !important;
+} */
+
+.luckd {
+    width: 35%;
+}
+
+.luckd input[type=text], input[type=email], input[type=tel] {
+    width: 70%;
+}
