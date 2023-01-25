@@ -15,7 +15,7 @@
     <div class="reporter">
         <img src="https://previews.123rf.com/images/gmast3r/gmast3r1809/gmast3r180900199/109840480-brunette-businessman-avatar-man-face-profile-icon-concept-online-support-service-male-cartoon-charac.jpg"
             alt="picture" width=200>Reported by <br>Ms. Rosarin Niyomsuntisuk<br> (Yaya)<br> ID 64010720<br><br><time
-            datetime="2020-02-14">Jan 25, 2023</time>
+            datetime="2023-01-26">Jan 26, 2023</time>
 
     </div>
     <article>
@@ -76,7 +76,7 @@
 
 <style>
 body {
-    width: 750px;
+    width: 770px;
     margin: auto;
 }
 .top, footer {
@@ -106,21 +106,24 @@ body {
     font-style: italic;
 }
 
-.col1 {
-    width: 50%;
-    display: inline-block;
+article {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
-.col2 {
-    position: absolute;
-    display: inline-block;
+.col1, .col2 {
+    flex-grow: 1;
+}
+
+aside, .prog {
+    display: flex;
 }
 
 aside {
-    width: 35%;
+    width: 34%;
     float: right;
-    position: static;
-    top: 16px;
+    transform: translateY(-15px);
     font-size: 36px;
     border-top: solid 3px;
     border-bottom: solid 3px;
