@@ -12,35 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>My Megazine</title>
-
-    <script>
-        let intervalId;
-
-        function scrollToBottom() {
-            const scrollSpeed = 1000; // 1 second
-            const scrollStep = 200; // pixels
-            const scrollInterval = scrollSpeed / scrollStep;
-
-            intervalId = setInterval(() => {
-                const scrollTop = document.documentElement.scrollTop;
-                const scrollHeight = document.documentElement.scrollHeight;
-                const clientHeight = document.documentElement.clientHeight;
-                if (scrollTop + clientHeight >= scrollHeight) {
-                    clearInterval(intervalId);
-                    return false;
-                }
-                window.scrollBy(0, scrollStep);
-            }, scrollInterval);
-
-            return false;
-        }
-
-        window.addEventListener("scroll", () => {
-            clearInterval(intervalId);
-        });
-
-
-    </script>
 </head>
 
 <body>
@@ -82,7 +53,7 @@
     <div class="col-sm-12 text-center bg-primary bg-gradient text-light py-5" id="home" style="margin-top:3.5%;">
         <h1 class="font-weight-bold">Welcome to our Doggy house.</h1>
         <p>Dog are not our whole life, but they make our life whole.</p>
-        <button type="button" onclick="scrollToBottom()" class="btn btn-light" id="scrolling">Start scrolling!</button>
+        <a href="#about" class="btn btn-light" id="scrolling">Start scrolling!</a>
     </div>
 
 
@@ -107,9 +78,19 @@
         <h2>Akita</h2>
         <div class="row d-flex">
             <div class="col-md-8">
-                <p>The Akita is a muscular, double-coated dog of ancient Japanese lineage famous for their dignity, courage, and
-                    loyalty. In their native land, they're venerated as family protectors and symbols of good health, happiness,
+                <p>The Akita is a muscular, double-coated dog of ancient Japanese lineage famous for their dignity,
+                    courage, and
+                    loyalty. In their native land, they're venerated as family protectors and symbols of good health,
+                    happiness,
                     and long life.</p>
+                <p>Akitas are burly, heavy-boned spitz-type dogs of imposing stature. Standing 24 to 28 inches at the
+                    shoulder, Akitas have a dense coat that comes in several colors, including white. The head is broad
+                    and massive, and is balanced in the rear by a full, curled-over tail. The erect ears and dark,
+                    shining eyes contribute to an expression of alertness, a hallmark of the breed. Akitas are quiet,
+                    fastidious dogs. Wary of strangers and often intolerant of other animals, Akitas will gladly share
+                    their silly, affectionate side with family and friends. They thrive on human companionship. The
+                    large, independent-thinking Akita is hardwired for protecting those they love. They must be well
+                    socialized from birth with people and other dogs.</p>
             </div>
             <div class="col-md-4">
                 <img src="https://www.linkpicture.com/q/akita1.png" style="width: 100%;">
@@ -230,15 +211,24 @@
         <h2>German-Shepherd</h2>
         <div class="row d-flex">
             <div class="col-md-8">
-                <p>Generally considered dogkind's finest all-purpose worker, the German Shepherd Dog is a large, agile, muscular
-                    dog of noble character and high intelligence. Loyal, confident, courageous, and steady, the German Shepherd
-                    is truly a dog lover's delight. German Shepherd Dogs can stand as high as 26 inches at the shoulder and,
-                    when viewed in outline, presents a picture of smooth, graceful curves rather than angles. The natural gait
-                    is a free-and-easy trot, but they can turn it up a notch or two and reach great speeds. There are many
-                    reasons why German Shepherds stand in the front rank of canine royalty, but experts say their defining
-                    attribute is character: loyalty, courage, confidence, the ability to learn commands for many tasks, and the
-                    willingness to put their life on the line in defense of loved ones. German Shepherds will be gentle family
-                    pets and steadfast guardians, but, the breed standard says, there's a 'certain aloofness that does not lend
+                <p>Generally considered dogkind's finest all-purpose worker, the German Shepherd Dog is a large, agile,
+                    muscular
+                    dog of noble character and high intelligence. Loyal, confident, courageous, and steady, the German
+                    Shepherd
+                    is truly a dog lover's delight. German Shepherd Dogs can stand as high as 26 inches at the shoulder
+                    and,
+                    when viewed in outline, presents a picture of smooth, graceful curves rather than angles. The
+                    natural gait
+                    is a free-and-easy trot, but they can turn it up a notch or two and reach great speeds. There are
+                    many
+                    reasons why German Shepherds stand in the front rank of canine royalty, but experts say their
+                    defining
+                    attribute is character: loyalty, courage, confidence, the ability to learn commands for many tasks,
+                    and the
+                    willingness to put their life on the line in defense of loved ones. German Shepherds will be gentle
+                    family
+                    pets and steadfast guardians, but, the breed standard says, there's a 'certain aloofness that does
+                    not lend
                     itself to immediate and indiscriminate friendships.'</p>
             </div>
             <div class="col-md-4">
@@ -265,6 +255,26 @@
                 <div class="progress">
                     <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:60%;">
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-12 bg-dark bg-gradient text-light py-5" id="credits">
+        <div class="container" style="width: 80%; margin: auto; padding: 5% 0 5% 0;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Credits</h1>
+                    <h3>by Rosemarries</h3>
+                    <p style="font-size: small; color: skyblue;">@Tue 31 January 2023</p>
+                    <p style="font-size: small; color: grey;">© Rosemarries2330 & D4T4-L34K</p>
+                </div>
+                <div class="col-sm-2" style="display: grid; justify-content: center; align-content: center;">
+                    <img src="https://www.linkpicture.com/q/icons8-github-256.png" style="width: 100%;">
+                </div>
+                <div class="col-sm-4" style="display: grid; justify-content: center; align-content: center;">
+                    <a href="https://github.com/Rosemarries" style="color: white;">https://github.com/Rosemarries</a>
                 </div>
             </div>
         </div>
