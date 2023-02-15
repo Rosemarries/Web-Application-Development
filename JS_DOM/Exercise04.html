@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="maincontainer"></div>
+        <script>
+            const container = document.querySelector("#maincontainer");
+            let worker;
+
+            const title = document.createElement("h2");
+            title.textContent = "Exercise 04 : JavaScript&DOM";
+            container.appendChild(title);
+            
+            const btn = document.createElement("button");
+            btn.textContent = "Click me to display Date and Time";
+            container.appendChild(btn);
+            btn.style.position = "fixed";
+            
+            let isRunning = false;
+            btn.addEventListener("click", () => {
+                isRunning = !isRunning;
+                if(isRunning){
+                    worker = new Worker("./worker.js");
+                    worker.onmessage = (e) => {
+                        btn.textContent = e.data;
+                    }
+                    btn.style.backgroundColor = randomColor();
+                    btn.style.color = randomColor();
+                    btn.style.top = "0";
+                    btn.style.right = "0";
+                }
+                else {
+                    worker.terminate();
+                    btn.style.top = null;
+                    btn.style.right = null;
+                }
+            });
+
+            function randomColor() {
+                const hex = "0123456789ABCDEF";
+                let color = "#";
+                for(let i=0;i<6;i++){
+                    color += hex[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            
+            for(let i=0;i<3;i++){
+                container.appendChild(document.createElement("br"));
+            }
+
+            const info = document.createElement("a");
+            info.textContent = "Personal Info";
+            container.appendChild(info);
+            info.style.color = "plum";
+            info.style.textDecoration = "underline";
+            info.style.cursor = "pointer";
+
+            let clickInfo = false;
+            info.addEventListener("mouseenter", () => {
+                info.style.backgroundColor = "yellow";
+                info.style.color = "blue";
+                
+            });
+            info.addEventListener("mouseout", () => {
+                info.style.backgroundColor = null;
+                info.style.color = "plum";
+            });
+            info.addEventListener("click", () => {
+                clickInfo = !clickInfo;
+                if(clickInfo) {
+                    ul.style.display = "block";
+                }
+                else {
+                    ul.style.display = "none";
+                }
+            });
+
+            const aboutMe = ["Rosarin Niyomsuntisuk, ID: 64010720", "Subject: Web Application Development", "Semetry: 2"]; 
+            const ul = document.createElement("ul");
+            container.appendChild(ul);
+            aboutMe.forEach((me) => {
+                const li = document.createElement("li");
+                ul.appendChild(li);
+                li.textContent += me;
+            });
+            ul.style.display = "none";
+
+            const snapShot = document.createElement("h1");
+            snapShot.textContent = "Snapshots";
+            container.appendChild(snapShot);
+
+            const shots = ["Fireworks", "Crest", "Action", "Buffalo"];
+            const ul2 = document.createElement("ul");
+            container.appendChild(ul2);
+            
+            shots.forEach((pic_li) => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                li.appendChild(a);
+                ul2.appendChild(li);
+                a.textContent += pic_li;
+                a.style.color = "blue";
+                a.style.textDecoration = "underline";
+                a.style.cursor = "pointer";
+
+                a.addEventListener("click", () => {
+                    if(a.textContent == shots[0]){
+                        pic.src = "https://images.squarespace-cdn.com/content/v1/5d82fa0f061168554fdb3de7/1602198494405-VN649JPEMZU0C90QJL7O/SeaWorld-02.jpg?format=2500w";
+                    }
+                    else if(a.textContent == shots[1]){
+                        pic.src = "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX5747863.jpg";
+                    }
+                    else if(a.textContent == shots[2]){
+                        pic.src = "https://img.buzzfeed.com/buzzfeed-static/static/2022-05/17/5/asset/fc598e846efc/sub-buzz-11305-1652764650-35.jpg";
+                    }
+                    else {
+                        pic.src = "https://ichef.bbci.co.uk/news/976/cpsprodpb/1C68/production/_104427270_7df045d1-7e02-4064-ae6f-6e6a5f9b7158.jpg";
+                    }
+                });
+            });
+
+            const pic = document.createElement("img");
+            pic.src = "https://cdn.discordapp.com/attachments/910539512826970213/1074972429513924608/Screenshot_2566-02-14_at_15.35.52.png";
+            container.appendChild(pic);
+            pic.style.width = "500px";
+
+        </script>
+    </body>
+</html>
