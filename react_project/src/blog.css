@@ -1,0 +1,29 @@
+.blog {
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    border: solid black 3px;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.blog .food_blog {
+    display: flex;
+}
+
+h3, h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    unicode-range: U+0E00-U+0E7F;
+}
+
+img {
+    max-width: 250px;
+}
+
+.blog .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

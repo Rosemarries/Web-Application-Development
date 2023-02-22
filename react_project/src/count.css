@@ -1,0 +1,17 @@
+.buttons {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.count {
+    background-color: lime;
+    color: blueviolet;
+    border: solid purple 2px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.vote {
+    padding: 10px;
+}

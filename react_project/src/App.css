@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  margin: auto;
+  padding: 1vh;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 213, 0);
+  font-weight: 900;
+}
