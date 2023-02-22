@@ -26,4 +26,18 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    column-gap: 1rem;
+}
+
+.count {
+    background-color: lime;
+    color: blueviolet;
+    border: solid purple 2px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.vote {
+    padding: 10px;
 }

@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
 import "./blog.css";
-import Counting from "./count.js";
+
+import PlusButton from './component/plus_button';
+import MinusButton from './component/minus_button';
 
 function Blog(food) {
-    const [count, setCount] = useState(0);
+    let [count, setCount] = useState(0);
 
     const handleCountChange = (newCount) => {
         setCount(newCount);
+    };
+
+    let count_time = () => {
+        console.log(count);
+        if (count <= 0) {
+            count = 0;
+            return "MIN";
+        }
+        else if (count >= 10) {
+            count = 10;
+            return "MAX";
+        }
+        return count;
     };
 
     return (
@@ -21,7 +36,12 @@ function Blog(food) {
                     <img src={food.pic}></img>
                 </div>
             </div>
-            <Counting count={count} onCountChange={handleCountChange} />
+
+            <div className='buttons'>
+                <PlusButton count={count} increaseCount={handleCountChange} />
+                <h2 className='count'>{count_time()}</h2>
+                <MinusButton count={count} decreaseCount={handleCountChange} />
+            </div>
         </div>
     );
 }
